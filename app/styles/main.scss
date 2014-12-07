@@ -1,0 +1,150 @@
+html, body {
+      height: 100%;
+      margin: 0;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.hero-unit {
+  margin: 50px auto 0 auto;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 60px;
+}
+
+.hero-unit h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ========== Utility Styles ==========*/
+.compress, .expand {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.expand {
+  max-height: 100%;
+}
+.slideout-left, .slideout-right, .slidein-left, .slidein-right {
+  max-width: 0;
+  overflow-x: hidden;
+  transition: max-width 0.5s ease-in-out;
+}
+.slideout-left, .slideout-right {
+  max-width: 100%;
+}
+.raise, .lower {
+  top: -400px;
+  transition: top 0.5s ease-in-out;
+}
+.lower {
+  top: 0;
+}
+.delay-1s {
+  transition-delay: 0.5s;
+}
+
+/* ========== Polymer Styles ==========*/
+core-scroll-header-panel {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* background for toolbar when it is at its full size */
+core-scroll-header-panel::shadow #headerBg {
+  background-image: url(../images/mojave5.jpg);
+  background-position: top;
+}
+/* background in FF not working -- this is a fix */
+core-scroll-header-panel #headerContainer {
+  background-color: #15365E;
+}
+/* background for toolbar when it is condensed */
+core-scroll-header-panel::shadow #condensedHeaderBg {
+  background-color: #f4b400;
+}
+core-toolbar {
+  color: #f1f1f1;
+  fill: #f1f1f1;
+  background-color: transparent;
+}
+.icon-menu-item {
+  width: 50px;
+  height: 50px;
+}
+
+/* ========== General Styles ==========*/
+.title {
+  transform-origin: 0;
+  font-size: 40px;
+}
+.content {
+  background-color: #eee;
+}
+.logo-main {
+  width: 75px;
+  margin-bottom: -7px;
+  margin-right: 23px;
+}
+#main-tabs {
+  /*background-color: blue;*/
+}
+.main-page {
+  position: absolute;
+}
+.main-page-inner {
+  margin: 0 auto;
+  width: 90%;
+  padding: 25px;
+
+}
+.main-secondary {
+  position: absolute;
+}
+
+/* ========== Pages Styles ==========*/
+#home {
+  background-image: url(../images/desk_mockup.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 80%;  /* TODO: this is a temporary fix */
+}
+#home-inner {
+  color: whitesmoke;
+  background: rgba(0,0,0,0.5);
+  position: relative;
+}
+#bio {
+  background-image: url(../images/bio.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#bio-inner {
+  color: whitesmoke;
+  background: rgba(0,0,0,0.5);
+}
+#projects-inner {
+  background: lightcoral;
+}
+#contact-inner {
+  background: lightsalmon;
+}
