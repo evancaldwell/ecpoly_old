@@ -25,14 +25,14 @@
       <div class="title" flex><img class="logo-main" src="images/logo.png"><span id="title-text">Evan Caldwell - Web Developer</span></div>
       <core-icon-button icon="search"></core-icon-button>
       <core-icon-button icon="more-vert"></core-icon-button>
-      <paper-tabs id="main-tabs" class="bottom fit" selected="0">
+      <paper-tabs id="main-tabs" class="bottom fit core-narrow" selected="0"> <!-- selected="{{selected}}" -->
         <paper-tab id="home-tab" label="home"><core-icon class="icon-menu-item" icon="home"></core-icon></paper-tab>
         <paper-tab id="bio-tab" label="bio"><core-icon class="icon-menu-item" icon="account-circle"></core-icon></paper-tab>
         <paper-tab id="projects-tab" label="projects"><core-icon class="icon-menu-item" icon="work"></core-icon></paper-tab>
         <paper-tab id="contact-tab" label="contact"><core-icon class="icon-menu-item" icon="mail"></core-icon></paper-tab>
       </paper-tabs>
     </core-toolbar>
-    <core-pages id="main-pages" selected="0" class="content">
+    <core-pages id="main-pages" selected="0" class="content"> <!-- selected="{{selected}}" -->
       <div id="home" label="home" class="main-page expand">
         <div id="home-inner" class="main-page-inner">
           <div id="landing-quote"><!-- This is intended to be a quote that alludes to the un-ending change 
