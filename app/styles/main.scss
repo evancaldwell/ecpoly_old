@@ -1,6 +1,6 @@
 html, body {
-      height: 100%;
-      margin: 0;
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
 }
 /* ========== Utility Styles ==========*/
 .compress, .expand {
-  max-height: 0;
+  /*max-height: 0;*/
   overflow-y: hidden;
   transition: max-height 0.5s ease-in-out;
 }
@@ -105,6 +105,9 @@ core-toolbar {
   margin-bottom: -7px;
   margin-right: 23px;
 }
+#main-pages {
+  height: 100%;
+}
 #main-tabs {
   /*background-color: blue;*/
 }
@@ -126,7 +129,7 @@ core-toolbar {
   background-image: url(../images/desk_mockup.jpg);
   background-size: cover;
   background-position: center;
-  height: 80%;  /* TODO: this is a temporary fix */
+  /* height: 80%;  TODO: this is a temporary fix */
 }
 #home-inner {
   color: whitesmoke;
