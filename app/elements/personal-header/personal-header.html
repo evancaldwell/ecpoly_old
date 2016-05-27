@@ -15,14 +15,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         display: block;
-        height: 650px;
-        background-color: var(--secondary-background-color);
+        height: 800px;
         overflow: hidden;
+        background-color: var(--secondary-background-color);
       }
       .logo-wrapper {
-        z-index: 10;
-        width: 100px;
-        height: 100px;
+        position: absolute;
+        width: 150px;
+        top: 25px;
+        left: 25px;
       }
       .logo-wrapper > * {
         width: 100%;
@@ -38,7 +39,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       #corner-line1 {
         position: absolute;
-        top: 115px;
+        top: 110px;
         left: -125px;
         height: 85px;
         width: 600px;
@@ -54,15 +55,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         transform: rotate(-45deg);
         background-color: var(--primary-background-color);
       }
+      #corner-line3 {
+        position: absolute;
+        top: 275px;
+        left: -165px;
+        height: 30px;
+        width: 900px;
+        transform: rotate(-45deg);
+        background-color: var(--primary-background-color);
+      }
     </style>
     <section id="header">
       <div id="corner-triangle"></div>
       <div id="corner-line1"></div>
       <div id="corner-line2"></div>
+      <div id="corner-line3"></div>
+      <svg-face></svg-face>
       <div class="logo-wrapper">
         <img src="../../images/logo.png">
       </div>
-      <svg-face></svg-face>
     </section>
   </template>
   <script>
