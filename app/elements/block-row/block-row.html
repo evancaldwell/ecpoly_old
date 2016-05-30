@@ -10,45 +10,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="personal-header">
+<dom-module id="block-row">
   <template>
     <style>
       :host {
         display: block;
-        height: 800px;
-        overflow: hidden;
-        background-color: var(--secondary-background-color);
       }
-      .logo-wrapper {
-        position: absolute;
-        width: 150px;
-        top: 25px;
-        left: 25px;
-      }
-      .logo-wrapper > * {
+      #content {
+        display: flex;
+        box-sizing: border-box;
         width: 100%;
-        height: 100%;
+      }
+      #content > * {
+        width: 33%;
+        margin-right: 30px;
+        margin-top: 45px;
+        margin-bottom: 20px;
+        padding: 15px;
+      }
+      #content> *:last-child {
+        margin-right: 0;
       }
     </style>
-    <section id="header">
-      <corner-stripes></corner-stripes>
-      <svg-face></svg-face>
-      <div class="logo-wrapper">
-        <img src="../../images/logo.png">
-      </div>
+
+    <section id="content">
+      <paper-material elevation="{{cardElevation}}">
+        <content select="#block_1"></content>
+      </paper-material>
+      <paper-material elevation="{{cardElevation}}">
+        <content select="#block_2"></content>
+      </paper-material>
+      <paper-material elevation="{{cardElevation}}">
+        <content select="#block_3"></content>
+      </paper-material>
     </section>
+
   </template>
   <script>
   (function() {
     'use strict';
 
     Polymer({
-      is: 'personal-header',
+      is: 'block-row',
 
       properties: {
-        foo: {
-          type: String,
-          value: 'personal-header',
+        cardElevation: { //TODO: how to bind to a polymer elements custom declaration
+          type: Number,
+          value: 1,
           notify: true
         }
       }

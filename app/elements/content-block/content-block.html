@@ -10,45 +10,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="personal-header">
+<dom-module id="content-block">
   <template>
     <style>
       :host {
         display: block;
-        height: 800px;
-        overflow: hidden;
-        background-color: var(--secondary-background-color);
       }
-      .logo-wrapper {
-        position: absolute;
-        width: 150px;
-        top: 25px;
-        left: 25px;
-      }
-      .logo-wrapper > * {
+      iron-image {
         width: 100%;
-        height: 100%;
+        height: 150px;
+      }
+      .content-text {
+
       }
     </style>
-    <section id="header">
-      <corner-stripes></corner-stripes>
-      <svg-face></svg-face>
-      <div class="logo-wrapper">
-        <img src="../../images/logo.png">
-      </div>
-    </section>
+
+    <iron-image id="mainImg" class="" sizing="cover" preload fade src="{{mainImg}}"></iron-image>
+    <content class="content-text"></content>
+
   </template>
   <script>
   (function() {
     'use strict';
 
     Polymer({
-      is: 'personal-header',
+      is: 'content-block',
 
       properties: {
-        foo: {
+        mainImg: { //TODO: again binding is not working
           type: String,
-          value: 'personal-header',
+          value: 'http://lorempixel.com/350/350/people',
           notify: true
         }
       }
