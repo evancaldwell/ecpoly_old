@@ -1,0 +1,115 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="portfolio-stack">
+  <template>
+    <style>
+      :host {
+        display: block;
+        perspective: 1600px;
+        margin-left: 20px;
+        width: 400px;
+        padding: 0;
+        position: relative;
+        max-width: 100%;
+      }
+      .portfolio-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 3px;
+        width: 350px;
+        height: 200px;
+        color: white;
+        box-shadow: 5px 5px 12px 0px rgba(0,0,0,0.7);
+        border: 10px solid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+        outline: 1px solid transparent;
+        transform: translateZ(0) translateX(0) rotateY(0);
+      }
+
+      .portfolio-item:last-child {
+        position: relative;
+      }
+
+      .portfolio-item:first-child {
+        transform: translateZ(-300px) translateX(20%) rotateY(-45deg) translateY(80px);
+        background: url(http://lorempixel.com/350/350/city);
+        background-size: cover;
+      }
+      .portfolio-item:first-child:hover {
+        transform: translateZ(-250px) translateX(30%) rotateY(-40deg) translateY(90px);
+      }
+
+      .portfolio-item:nth-child(2) {
+        transform: translateZ(-300px) rotateY(-45deg) translateY(40px);
+        background: url(http://lorempixel.com/350/350/abstract);
+        background-size: cover;
+      }
+      .portfolio-item:nth-child(2):hover {
+        transform: translateZ(-250px) rotateY(-40deg) translateX(10%) translateY(50px);
+      }
+
+      .portfolio-item:nth-child(3) {
+        transform: translateZ(-300px) translateX(-20%) rotateY(-45deg);
+        background: url(../../images/vecchio_shot.png);
+        background-size: cover;
+      }
+      .portfolio-item:nth-child(3):hover {
+        transform: translateZ(-250px) translateX(-10%) rotateY(-40deg) translateY(10px);
+      }
+      .portfolio-item:hover {
+        // transform: translateZ(-250px) translateX(30%) rotateY(-40deg);
+        background: #1859FF;
+        color: white;
+        cursor: pointer;
+      }
+
+      .portfolio-item > p {
+        display: none;
+      }
+      .portfolio-item:hover > p {
+        display: block;
+      }
+    </style>
+    <div class="portfolio-item">
+      <p>Click for details</p>
+    </div>
+    <div class="portfolio-item">
+      <p>Click for details</p>
+    </div>
+    <div class="portfolio-item">
+      <p>Click for details</p>
+    </div>
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'portfolio-stack',
+
+      properties: {
+        itemDimensions: {
+          type: String,
+          value: '100px',
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>

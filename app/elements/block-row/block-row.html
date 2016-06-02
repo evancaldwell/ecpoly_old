@@ -15,6 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
       :host {
         display: block;
+        padding: 0 15px;
       }
       #content {
         display: flex;
@@ -54,7 +55,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       is: 'block-row',
 
       properties: {
-        cardElevation: { //TODO: how to bind to a polymer elements custom declaration
+        cardElevation: {
           type: Number,
           value: 1,
           notify: true
